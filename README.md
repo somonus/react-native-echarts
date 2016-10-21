@@ -70,6 +70,10 @@ npm start
 ```
 打开ios目录下的xcode工程，点击run
 
+运行截图：
+
+![image](https://github.com/somonus/react-native-echarts/blob/master/example/demo.png)
+
 ## License
 
 native-echarts is released under the MIT license.
