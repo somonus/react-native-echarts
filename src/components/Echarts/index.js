@@ -7,6 +7,7 @@ export default class App extends Component {
   render() {
     return (
       <WebView
+        scrollEnabled = {false}
         style={{
           height: this.props.height || 400,
         }}
