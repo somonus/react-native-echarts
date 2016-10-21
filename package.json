@@ -1,0 +1,29 @@
+{
+  "name": "rn-echarts",
+  "version": "0.1.0",
+  "description": "echarts for react-native",
+  "main": "src/index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/somonus/react-native-echarts.git"
+  },
+  "keywords": [
+    "react-native",
+    "echarts"
+  ],
+  "author": "somonus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/somonus/react-native-echarts/issues"
+  },
+  "homepage": "https://github.com/somonus/react-native-echarts#readme",
+  "dependencies": {
+    "echarts": "3.2.3"
+  }
+}
