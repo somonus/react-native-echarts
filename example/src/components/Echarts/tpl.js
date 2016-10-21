@@ -1,5 +1,5 @@
 import echarts from './echarts.min';
-
+console.log(echarts)
 export default `
 <!DOCTYPE html>\n
 <html>
@@ -16,10 +16,10 @@ export default `
       }
       #main {
         height: 100%;
-        background: red;
       }
     </style>
     <script>
+      alert(1)
       ${echarts}
     </script>
   </head>
