@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import { View, WebView } from 'react-native';
+import { WebView, View } from 'react-native';
+import { Container, Echarts } from './components'
 
 export default class App extends Component {
   render() {
     return (
-        <WebView
-          source = {{html: `<div>test</div>`}}
-        />
+      <Container width={this.props.width}>
+        <Echarts {...this.props} />
+      </Container>
     );
   }
 }

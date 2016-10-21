@@ -11,21 +11,34 @@ import {
   Text,
   View
 } from 'react-native';
+import Echarts from 'native-echarts';
 
 export default class app2 extends Component {
   render() {
+    const option = {
+      title: {
+          text: 'ECharts 入门示例'
+      },
+      tooltip: {},
+      legend: {
+          data:['销量']
+      },
+      xAxis: {
+          data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+      },
+      yAxis: {},
+      series: [{
+          name: '销量',
+          type: 'bar',
+          data: [5, 20, 36, 10, 10, 20]
+      }]
+    };
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          Welcome to React Native Echarts!
         </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
+        <Echarts option={option} height={300} />
       </View>
     );
   }
@@ -41,12 +54,7 @@ const styles = StyleSheet.create({
   welcome: {
     fontSize: 20,
     textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+    margin: 30,
   },
 });
 
