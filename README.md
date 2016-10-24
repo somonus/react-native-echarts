@@ -68,11 +68,18 @@ cd example
 npm install
 npm start
 ```
+
+### IOS
+
 打开ios目录下的xcode工程，点击run
 
 运行截图：
 
 ![image](https://github.com/somonus/react-native-echarts/blob/master/example/demo.png)
+
+### Android
+
+使用Android studio打开Android目录，点击run
 
 ## License
 
