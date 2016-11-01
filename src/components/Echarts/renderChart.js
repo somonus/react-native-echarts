@@ -1,39 +1,11 @@
 import echarts from './echarts.min';
 import toString from '../../util/toString';
 
-export default function renderChart(option) {
+export default function renderChart(props) {
+  const height = props.height || 400;
   return `
-    <!DOCTYPE html>\n
-    <html>
-      <head>
-        <title>echarts</title>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <style type="text/css">
-          html,body {
-            height: 100%;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-          }
-          #main {
-            height: 100%;
-          }
-        </style>
-        <script>
-          ${echarts}
-        </script>
-      </head>
-      
-      <body>
-        <div id="main" ></div>
-        <script>
-          // 基于准备好的dom，初始化echarts实例
-            var myChart = echarts.init(document.getElementById('main'));
-            // 使用刚指定的配置项和数据显示图表。
-            myChart.setOption(${toString(option)});
-        </script>
-      <body>
-    <html>
-    `
+    document.getElementById('main').style.height = "${height}px";
+    var myChart = echarts.init(document.getElementById('main'));
+    myChart.setOption(${toString(props.option)});
+  `
 }

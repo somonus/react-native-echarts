@@ -8,10 +8,11 @@ export default class App extends Component {
     return (
       <WebView
         scrollEnabled = {false}
+        injectedJavaScript = {renderChart(this.props)}
         style={{
           height: this.props.height || 400,
         }}
-        source={{html: renderChart(this.props.option)}}
+        source={require('./tpl.html')}
       />
     );
   }
