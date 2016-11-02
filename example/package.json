@@ -9,7 +9,7 @@
   "dependencies": {
     "react": "15.3.2",
     "react-native": "0.35.0",
-    "native-echarts": "0.2.0"
+    "native-echarts": "file:../"
   },
   "jest": {
     "preset": "jest-react-native"
