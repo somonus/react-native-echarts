@@ -15,7 +15,9 @@
   },
   "keywords": [
     "react-native",
-    "echarts"
+    "echarts",
+    "chart",
+    "charts"
   ],
   "author": "somonus",
   "license": "MIT",

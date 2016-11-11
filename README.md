@@ -6,15 +6,13 @@ $ npm install native-echarts --save
 
 ## Usage
 
-###用法
+The Usage is complete consistent with Echarts
 
-用法完全和echarts一致，将echarts的option传给组件。option详细属性详见[文档](http://echarts.baidu.com/option.html#title)
+component props:
 
-native-echarts共暴露了三个属性:
-
-* *option* (object): echarts图表的配置项，无默认值。 
-* *width* (number): 图表的宽度，默认值为其外层容器的宽度。 
-* *height* (number): 图表的高度，默认值为400。 
+* *option* (object): The option for echarts: [Documentation](http://echarts.baidu.com/option.html#title)。 
+* *width* (number): The width of the chart. The default value is the outer container width. 
+* *height* (number): The height of the chart. The default value is 400. 
 
 
 ```js
@@ -31,7 +29,7 @@ export default class app extends Component {
   render() {
     const option = {
       title: {
-          text: 'ECharts 入门示例'
+          text: 'ECharts demo'
       },
       tooltip: {},
       legend: {
@@ -71,17 +69,17 @@ npm start
 
 ### IOS
 
-打开ios目录下的xcode工程，点击run
+Open the xcode project in the ios directory and click run
 
-运行截图：
+screenshots：
 
 ![image](https://github.com/somonus/react-native-echarts/blob/master/example/demoIOS.png)
 
 ### Android
 
-使用Android studio打开Android目录，点击run
+Open the Android project in the android directory with Android Studio and click run.
 
-运行截图：
+screenshots：
 
 ![image](https://github.com/somonus/react-native-echarts/blob/master/example/demoAndroid.png)
 
