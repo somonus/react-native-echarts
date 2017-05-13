@@ -18,7 +18,7 @@ export default function renderChart(props) {
         }
         return val;
       });
-      window.postMessage(JSON.stringify(paramsString));
+      window.postMessage(paramsString);
     });
   `
 }
