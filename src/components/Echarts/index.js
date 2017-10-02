@@ -19,6 +19,7 @@ export default class App extends Component {
           injectedJavaScript = {renderChart(this.props)}
           style={{
             height: this.props.height || 400,
+            backgroundColor: this.props.backgroundColor || 'transparent'
           }}
           source={require('./tpl.html')}
         />
