@@ -10,6 +10,9 @@ export default class App extends Component {
     }
   }
 
+  //由于在发包时，找不到模板，现将
+  //source={require('./tpl.html')}改为source={this.props.source}
+  //模板由外部传入
   render() {
     return (
       <View style={{flex: 1, height: this.props.height || 400,}}>
@@ -20,7 +23,7 @@ export default class App extends Component {
           style={{
             height: this.props.height || 400,
           }}
-          source={require('./tpl.html')}
+          source={this.props.source}
         />
       </View>
     );
