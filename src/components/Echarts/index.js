@@ -1,25 +1,29 @@
 import React, { Component } from 'react';
-import { WebView, View, StyleSheet } from 'react-native';
+import { WebView, View } from 'react-native';
+import _ from 'lodash';
 import renderChart from './renderChart';
-import echarts from './echarts.min';
 
 export default class App extends Component {
   componentWillReceiveProps(nextProps) {
-    if(nextProps.option !== this.props.option) {
-      this.refs.chart.reload();
+    if (!_.isEqual(nextProps.option, this.props.option)) {
+      this.chart.reload();
     }
   }
-
   render() {
+    const { height = 400, onMessage } = this.props;
     return (
-      <View style={{flex: 1, height: this.props.height || 400,}}>
+      <View style={{ flex: 1, height }}>
         <WebView
-          ref="chart"
-          scrollEnabled = {false}
-          injectedJavaScript = {renderChart(this.props)}
-          style={{
-            height: this.props.height || 400,
+          ref={(ref) => {
+            this.chart = ref;
           }}
+          onMessage={(event) => {
+            onMessage && onMessage(event.nativeEvent.data);
+          }}
+          javaScriptEnabled={true}
+          scrollEnabled={false}
+          injectedJavaScript={renderChart(this.props)}
+          style={{ height }}
           source={require('./tpl.html')}
         />
       </View>
