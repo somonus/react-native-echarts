@@ -21,6 +21,7 @@ export default class App extends Component {
             height: this.props.height || 400,
           }}
           source={require('./tpl.html')}
+          style={{backgroundColor: this.props.option.backgroundColor || '#FFFFFF'}}
           onMessage={event => this.props.onPress ? this.props.onPress(JSON.parse(event.nativeEvent.data)) : null}
         />
       </View>
