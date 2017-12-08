@@ -20,6 +20,7 @@ export default class App extends Component {
           style={{
             height: this.props.height || 400,
           }}
+          scalesPageToFit={false}          
           source={require('./tpl.html')}
           onMessage={event => this.props.onPress ? this.props.onPress(JSON.parse(event.nativeEvent.data)) : null}
         />
