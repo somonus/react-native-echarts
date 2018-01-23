@@ -2,8 +2,18 @@ import React, { Component } from 'react';
 import { WebView, View, StyleSheet } from 'react-native';
 import renderChart from './renderChart';
 import echarts from './echarts.min';
+import PropTypes from "prop-types";
 
 export default class App extends Component {
+  static propTypes = {
+    ...WebView.propTypes,
+    option: PropTypes.object.isRequired,
+    width: PropTypes.number,
+    height: PropTypes.number,
+    backgroundColor: PropTypes.string,
+    onPress: PropTypes.func,
+  }
+
   componentWillReceiveProps(nextProps) {
     if(nextProps.option !== this.props.option) {
       this.refs.chart.reload();
@@ -24,6 +34,7 @@ export default class App extends Component {
           scalesPageToFit={false}          
           source={require('./tpl.html')}
           onMessage={event => this.props.onPress ? this.props.onPress(JSON.parse(event.nativeEvent.data)) : null}
+          {...this.props}
         />
       </View>
     );
