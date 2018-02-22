@@ -9,6 +9,10 @@ export default function renderChart(props) {
     document.getElementById('main').style.width = "${width}";
     var myChart = echarts.init(document.getElementById('main'));
     myChart.setOption(${toString(props.option)});
+    window.document.addEventListener('message', function(e) {
+      var option = JSON.parse(e.data);
+      myChart.setOption(option);
+    });
     myChart.on('click', function(params) {
       var seen = [];
       var paramsString = JSON.stringify(params, function(key, val) {
