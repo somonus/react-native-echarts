@@ -34,6 +34,7 @@ export default class App extends Component {
           }}
           scalesPageToFit={Platform.OS !== 'ios'}
           source={require('./tpl.html')}
+          style={{backgroundColor: this.props.option.backgroundColor || 'rgba(0, 0, 0, 0)'}}
           onMessage={event => this.props.onPress ? this.props.onPress(JSON.parse(event.nativeEvent.data)) : null}
         />
       </View>
