@@ -39,6 +39,7 @@ export default class App extends Component {
           <WebView
             ref="chart"
             scrollEnabled = {false}
+            javaScriptEnabled={true}
             injectedJavaScript = {renderChart(this.props,true)}
             style={{
               height: this.props.height || 400,
