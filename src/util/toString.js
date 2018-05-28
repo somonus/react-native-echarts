@@ -10,5 +10,6 @@ export default function toString(obj) {
     result = result.replace('\"~--demo--~', '').replace('~--demo--~\"', '');
   } while (result.indexOf('~--demo--~') >= 0);
   result = result.replace(/\\n/g, '').replace(/\\\"/g,"\"");//最后一个replace将release模式中莫名生成的\"转换成"
+  result = unescape(result.replace(/\\u/g, "%u"));
   return result;
 }
