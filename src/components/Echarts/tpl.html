@@ -78,5 +78,31 @@
 
 <body>
 <div id="main" ></div>
+<script>
+  function changeDigit(num = 0, digit = 2) {
+    if (isNaN(num)) {
+      return num;
+    }
+    if (typeof num === 'string') {
+      num = parseFloat(num);
+    }
+    const numberString = num.toFixed(digit);
+    const array = numberString.split('.');
+    let intPart = '';
+    let sign = '';// 符号
+    if (array[0].indexOf('-') > -1) {
+      sign = '-';// 负号
+      array[0] = array[0].slice(1);
+    }
+    for (let i = 0; i < array[0].length; i++) {
+      let middle = '';
+      if (i > 2 && i % 3 === 0) {
+        middle = ',';
+      }
+      intPart = array[0].charAt(array[0].length - i - 1) + middle + intPart;
+    }
+    return sign + intPart + (array[1] !== undefined ? '.' + array[1] : '');
+  }
+</script>
 <body>
 <html>
