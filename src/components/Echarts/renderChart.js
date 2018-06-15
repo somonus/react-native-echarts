@@ -18,7 +18,7 @@ export default function renderChart(props,isFirst) {
     document.getElementById('main').style.height = "${height}";
     document.getElementById('main').style.width = "${width}";
     myChart.clear();
-    myChart.resize({width:${width},height:${height}});
+    myChart.resize();
     myChart.setOption(${toString(props.option)});
   `
   }
