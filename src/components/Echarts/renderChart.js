@@ -10,7 +10,6 @@ export default function renderChart(props,isFirst) {
     return `
     document.getElementById('main').style.height = "${height}";
     document.getElementById('main').style.width = "${width}";
-    myChart = echarts.init(document.getElementById('main'));
     myChart.setOption(${toString(props.option)});
   `
   }else{
