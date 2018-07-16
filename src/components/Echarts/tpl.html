@@ -79,6 +79,13 @@
 <body>
 <div id="main" ></div>
 <script>
+  var myChart = echarts.init(document.getElementById('main'));
+
+  myChart.on('legendselectchanged',function(params){
+      if(typeof window.postMessage  === 'function'){
+        window.postMessage(JSON.stringify(params))
+      }
+  })
   function changeDigit(num = 0, digit = 2) {
     if (isNaN(num)) {
       return num;
