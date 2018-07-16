@@ -83,7 +83,7 @@
 
   myChart.on('legendselectchanged',function(params){
       if(typeof window.postMessage  === 'function'){
-        window.postMessage(params)
+        window.postMessage(JSON.stringify(params))
       }
   })
   function changeDigit(num = 0, digit = 2) {
