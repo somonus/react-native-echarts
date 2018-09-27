@@ -26,6 +26,6 @@
   },
   "homepage": "https://github.com/somonus/react-native-echarts#readme",
   "dependencies": {
-    "echarts": "3.2.3"
+    "echarts": "^4.2.0-rc.1"
   }
 }
