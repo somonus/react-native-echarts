@@ -17,13 +17,6 @@ export default class App extends Component {
         return false;
     }
 
-    componentWillReceiveProps(nextProps) {
-        if (nextProps.option !== this.props.option) {
-            // 解决数据改变时页面闪烁的问题
-            this.refs.chart.injectJavaScript(renderChart(nextProps, false));
-        }
-    }
-
     render() {
         const messageFn = this.props.onMessage || null;
         return (
@@ -32,7 +25,7 @@ export default class App extends Component {
                     ref="chart"
                     scrollEnabled={false}
                     scalesPageToFit={false}
-                    injectedJavaScript={renderChart(this.props, true)}
+                    injectedJavaScript={renderChart(this.props)}
                     style={{
                         height: this.props.height || 400,
                     }}
