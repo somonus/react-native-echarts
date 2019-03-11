@@ -5,7 +5,7 @@
   [![License](http://img.shields.io/npm/l/native-echarts.svg?style=flat)](https://raw.githubusercontent.com/somonus/react-native-echarts/master/LICENSE.md)
   
 ## install
-
+```
 $ npm install native-echarts --save
 
 ## Usage
@@ -61,7 +61,7 @@ AppRegistry.registerComponent('app', () => app);
 
 
 
-##Example
+## Example
 
 *run demo*
 
