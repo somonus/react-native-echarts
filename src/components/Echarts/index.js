@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { WebView, View, StyleSheet, Platform } from 'react-native';
+import { equals } from 'ramda';
 import renderChart from './renderChart';
 import echarts from './echarts.min';
 
@@ -12,7 +13,10 @@ export default class App extends Component {
   
 
   componentWillReceiveProps(nextProps) {
-    if(nextProps.option !== this.props.option) {
+    // if(nextProps.option !== this.props.option) {
+    //   this.refs.chart.reload();
+    // }
+	if(!equals(nextProps.option, this.props.option)) {
       this.refs.chart.reload();
     }
   }
