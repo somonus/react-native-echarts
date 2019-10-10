@@ -43,7 +43,7 @@ export default class App extends Component {
                 backgroundColor: this.props.backgroundColor || 'transparent'
               }}
               originWhitelist={['*']}
-              source={{ html:getTpl() }}
+              source={Platform.OS === "ios"?{ html:getTpl() }:{uri:'file:///android_asset/tpl.html'}}
               onMessage={event => this.props.onPress ? this.props.onPress(JSON.parse(event.nativeEvent.data)) : null}
           />
         </View>
