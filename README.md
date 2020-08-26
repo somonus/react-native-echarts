@@ -10,7 +10,7 @@ $ npm install native-echarts --save
 
 ## Usage
 
-The Usage is complete consistent with Echarts
+The Usage is complete consistent with Apache ECharts (incubating).
 
 component props:
 
