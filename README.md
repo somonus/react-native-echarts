@@ -6,7 +6,7 @@
   
 ## install
 
-$ npm install native-echarts --save
+$ npm install native-echarts react-native-webview --save
 
 ## Usage
 
@@ -80,6 +80,7 @@ screenshots：
 ![image](https://github.com/somonus/react-native-echarts/blob/master/example/demoIOS.png)
 
 ### Android
+copy tpl.html to android\app\src\main\assets
 
 Open the Android project in the android directory with Android Studio and click run.
 
