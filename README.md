@@ -14,7 +14,7 @@ The Usage is complete consistent with Echarts
 
 component props:
 
-* *option* (object): The option for echarts: [Documentation](http://echarts.baidu.com/option.html#title)。 
+* *option* (object): The option for echarts: [Documentation](https://echarts.apache.org/option.html#title)。 
 * *width* (number): The width of the chart. The default value is the outer container width. 
 * *height* (number): The height of the chart. The default value is 400. 
 
